@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de Dados</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.678);
+        } 
+    </style>
+</head>
+<body>
+    <script>
+        var nome= window.prompt("Digite o seu nome:");
+        window.alert(`Olá ${nome}, siga os próximos passos`);
+        window.alert("Por favor, digite numeros inteiros de 0 até 10");
+        var n1 = Number.parseInt(window.prompt("Digite um número:"));
+        var n2 = Number.parseInt(window.prompt("Digite outro número:"));
+        var n3 = Number.parseInt(window.prompt("Digite mais um número:"));
+        var n4 = Number.parseInt(window.prompt("Digite um ultimo número:"));
+        var media = (n1 + n2 + n3 + n4) / 4;
+        //window.alert("A média dos números que voce colocou é: " + media); Com Concatenação
+        window.alert(`A media dos números que você colocou é de : ${media}`); //Com Template String
+
+        /* 
+            Neste exemplo foi feito uma média de números pedidos em um prompt.
+
+            Ao pedir um número no prompt, esse número se torna String pois os valores dentro do prompt se tornam string, por esse motivo usamos o método Number.parseInt, nele colocamos o valor no prompt e convertemos a String para um número Inteiro.
+
+            Se utilizarmos o simbolo de + com String ele irá concatenar, ou seja, irá juntar uma string com outra como no exemplo acima. Se utilizarmos o + com int, ele irá fazer as somas dos ints.
+            
+            Utilizamos também o método de Template String, que tem a mesma função do .format() do Python, que é colocar a variavel nas strings sem utilizar a concatenação, Utilizando ${}
+
+            Comandos relacionados
+            Number.parseInt(var); Converter uma variável para Inteiro.
+            Number.parseFloat(var); Converter uma variável para um número Real, ou número flutuante.
+            <variavel>.toString(); Converte uma variável para String.
+            ${} - É um método de colocar a variavel junto com a string sem ter a poluição de concatenação (detalhe: para usar essa forma é necessário utilizar ` ` ao invés de aspas ou aspas simples)
+
+            Podemos utilizar uma forma mais simplificada.
+            Number(var); Comando que faz com que a variável se torne ou int ou float, o JS descide qual vai ser
+            String(var); O JS converte a variável para String.
+        */
+    </script>
+</body>
+</html>

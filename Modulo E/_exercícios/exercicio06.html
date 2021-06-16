@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+    <link rel="stylesheet" href="../../_css/estilo.css" type="text/css">
+    <link rel="icon" href="../../_imagens/Notebook-Pen-icon.png" type="image/css">
+    <style>
+        div#body{
+            text-align: justify;
+            width: 400px;
+            background-color: white;
+            padding: 10px;  
+            margin: 0px 0px 20px 430px;
+            border-radius: 5px;
+            box-shadow: 3px 3px rgba(0, 0, 0, 0.185);
+        }
+
+        main#corpo > h1 {
+            text-align: center;
+            color: white;   
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Padronização de site para estudo</h1>
+        <!--Desafio da Contagem com JS-->
+    </header>
+    <main id="corpo">
+        <h1>Tabuada</h1>
+        <div id="body">
+            <p>
+                <label for="num">Numero :</label>
+                <input type="text" id="num">
+                <button type="button" onclick='tabuada()'>Gerar Tabuada</button>
+            </p>
+            <p>
+                <select id="tab" style="width: 200px;" size=10></select>
+            </p>
+
+        </div>
+        <script>
+            function tabuada(){
+            var num = document.getElementById('num').value
+            var tab = document.getElementById('tab')
+            
+            
+            if (num.length == 0 ){
+                window.alert('ERRO! É necessário colocar um número')
+            }else{
+                tab.innerText = ''
+                num = Number.parseInt(num)
+                for (var c = 1; c <= 10; c++){
+                    var item = document.createElement('option')
+                    item.text = `${num} x ${c} = ${num*c}`
+                    tab.appendChild(item)
+                }
+            }
+
+            }
+        </script>
+    </main>
+    <footer>
+        <h2>Feito para Testes e Estudos</h2>
+        <h3>Por André Lima</h3>
+    </footer>
+
+    
+</body>
+</html>

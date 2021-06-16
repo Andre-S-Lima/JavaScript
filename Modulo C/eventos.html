@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt arial;
+            background-color: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Página de Eventos DOM</h1>
+    <div id='area' onmousedown="clicar()" onmouseup="soltar()" onmouseenter="entrar()" onmouseout="saiu()">
+        Interaja...
+    </div>
+
+    <script>
+        function clicar(){
+            var a = window.document.getElementById('area')
+            a.innerHTML = 'Clicou!'
+            a.style.backgroundColor = 'rgb(54, 135, 228)'
+        }
+
+        function soltar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'Soltou!'
+            a.style.backgroundColor = 'rgb(42, 139, 42)'
+        }
+
+        function entrar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'Entrou!'
+        }
+
+        function saiu(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'Saiu!'
+        }
+    
+    /*
+        Exemplos de Eventos DOM
+
+        onmousedown = evento que funciona quando você clica e continua com o botão pressionado, dai ele continua com o evento
+        onmouseup = acontece quando você clica e solta o botão
+        onmouseenter = quando o mouse entra na area do elemento definido, o evento acontece
+        onmouseout = quando o mouse sai da area do elemento definido, o evento acontece
+        onmouseclick = acontece quando voce faz a ação de clicar, apertar e soltar o botão no elemento.
+        
+    */
+    </script>
+</body>
+</html>

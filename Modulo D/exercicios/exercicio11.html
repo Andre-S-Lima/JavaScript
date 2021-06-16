@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario</title>
+
+    <!--Copiar esses dois links-->
+    <link rel="stylesheet" href="../../_css/estilo.css" type="text/css">
+    <link rel="icon" href="../../_imagens/Notebook-Pen-icon.png" type="image/x-icon">
+    <style>
+        h1#unico {
+            text-align : center;
+            color: white;   
+        }
+
+        article{
+            background-color: white;
+            width: 350px;
+            margin: 0px 0px 20px 450px;
+            border: 1px inset black;
+            border-radius: 5px;   
+        }
+
+        article > p {
+            text-align: center;
+        }
+
+        img#imagem{
+            display: block;
+            position: relative;
+            left: 40px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Padronização de site para estudo</h1>
+    </header>
+    
+    <main id="corpo">
+
+            <h1 id='unico'>Horario do dia</h1>
+            <article>
+            <p id='res'></p>
+            <div id="foto">
+            <img src="" alt="" id="imagem" >
+            </div>
+            </article>
+       
+       <script>
+            var agora = new Date()
+            var horario = agora.getHours()
+            var momento = document.getElementById('corpo')
+            var res = document.getElementById('res')
+            var img = document.getElementById('imagem')
+            res.innerHTML = `Agora são ${horario} horas.`
+            
+            
+            if (horario >=0 && horario < 6){
+                momento.style.backgroundImage = 'linear-gradient(to right, #001240, 75%, #6A55A0, #e25e5e)'
+                img.src= "../../_imagens/fotomadrugada.png"
+                
+            }else if (horario >=6 && horario < 12){
+                momento.style.backgroundImage = 'linear-gradient(to right, #e25e5e, 10%, #1856C7)'
+                img.src = '../../_imagens/fotomanha.png'
+            }else if (horario >=12 && horario < 18){
+                momento.style.backgroundImage = 'linear-gradient(to right, #1856C7, 50%, #6A55A0, #e25e5e)'
+                img.src ='../../_imagens/fototarde.png'
+            }else if (horario >=18 && horario < 24){
+                momento.style.backgroundImage = 'linear-gradient(to right, #e25e5e, 10%, #001240)'
+                img.src="../../_imagens/fotonoite.png"
+            }
+
+        </script>
+    </main>
+    
+    <footer>
+        <h2>Feito para Testes e Estudos</h2>
+        <h3>Por André Lima</h3>
+    </footer>
+</body>
+</html>

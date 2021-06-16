@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+
+    <link rel="stylesheet" href="../../_css/estilo.css" type="text/css">
+    <link rel="icon" href="../../_imagens/Notebook-Pen-icon.png" type="image/x-icon">
+
+</head>
+<body>
+    <!--Exercicio em HTML referente ao exercicio 06-->
+    <header>
+        <h1>Padronização de site para estudo</h1>
+    </header>
+    
+    <main id="corpo">
+        <h1 class="titulo">Exercício do horario</h1>
+        <label for="button">Clique no botão a seguir para saber a horas: </label>
+        <button type= 'button' id='botao' onclick="hora()">Horas </button>
+        <div id="res"></div>
+
+        <script>
+            function hora(){
+            var agora = new Date()
+            var hora = agora.getHours()
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Agora são <strong>${hora} horas</strong> de acordo com seu computador</p>`
+            
+            if (hora >= 0 && hora < 6){
+                res.innerHTML += '<p>Ainda está de madrugada. Boa Madrugada!</p>'
+            }else if (hora >=6 && hora < 12) {
+                res.innerHTML += '<p>Está de manhã. Bom dia!</p>'
+            }else if (hora >=12 && hora < 18) {
+                res.innerHTML += '<p>Está de tarde. Boa Tarde!</p>'
+            }else if (hora >=18 && hora < 24) {
+                res.innerHTML += '<p>Está de noite. Boa Noite!</p>'
+            }
+        }
+        </script>
+    
+    </main>
+    
+    <footer>
+        <h2>Feito para Testes e Estudos</h2>
+        <h3>Por André Lima</h3>
+    </footer>
+</body>
+</html>

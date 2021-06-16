@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        body{
+            background: rgb(86, 86, 224);
+            color: rgb(221, 219, 219);
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS.</p>
+    <div>Clique em mim</div>
+    <script>
+        //document.write(document.URL) - Comando para a URL ser um conteúdo do site
+        var corpo = window.document.getElementsByTagName('body')[0]
+        corpo.style.backgroundColor = 'grey';
+        
+        var id = window.document.getElementsByTagName("div")[0]
+        id.style.backgroundColor = 'red'
+        id.style.color = 'black'
+        id.style.width = 'fit-content'
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        //document.write(p2.innerText) - innerText pega o conteúdo sem formatação
+        document.write(p2.innerHTML) // innerHTML pega o conteúdo junto com a formatação
+    </script>
+    
+    <!-- DOM (Document Object Model) é uma manipulação de objeto dentro do código de um site, é exclusivo para sites, entao não pode ser usado no Node.JS   
+    
+    Arvore DOM
+    A arvore DOM é o nível hierárquico de um site, onde fica os Parents e os Childs.
+
+    Começa com window
+        ---- history           ---- body ------ tags ----- tags dentro da tags
+       |                      |
+    window -- document ---- HTML
+       |                      |
+        ---- location          ---- Head ------ tags ----- tags dentro da tags
+    
+    
+    window = janela do seu navegador, onde o site irá aparecer
+    location = É a localização do site, qual a URL, de onde ele foi acessado
+    documento = É onde fica o conteúdo do site, ou seja, onde fica o HTML
+    history = Onde fica a navegação do site, de onde ele vai vir e pra onde ele vai.
+    HTML = Linguagem de hipertextos, o seu site em si.
+    head = Onde fica a parte lógica do site
+    body = A parte onde fica o conteúdo do seu site.
+    
+    getElementsByTagName(<tag>)[<indice da tag>] = ele pega um elemento pela tag, como fio feito nos exemplos acima 
+    getElementByID(<id>) = Pega um elemento tenha um parametro 'ID' colocado no HTML
+    getElementsByName(<name>)[<indice do name>] = Pega um elemento que tenha um parametro 'Name' colocado no HTML
+    getElementsByClassName(<class>)[<indice da class>] = Pega um elemento que tenha um parametro 'Class' colocado no HTML
+    querySelector(<seletor do css>) = Pega um seletor do CSS para assim poder modificar seu elemento.
+    
+    ***Cuidado, existe diferença entre getELEMENTbyID e get ELEMENTSbyID, como estamos mexendo com plural nese caso, então getELEMENTSbyId por ser plural ele terá [] no final dele, pois será necessário informar qual o posicionamento do indice ele está.
+    
+    -->
+
+
+</body>
+</html>

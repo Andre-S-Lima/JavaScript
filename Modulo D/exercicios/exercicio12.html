@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Copiar esses dois links-->
+    <link rel="stylesheet" href="../../_css/estilo.css" type="text/css">
+    <link rel="icon" href="../../_imagens/Notebook-Pen-icon.png" type="image/x-icon">
+
+    <style>
+        h1#unico {
+            text-align : center;
+            color: white;   
+        }
+
+        article{
+            background-color: white;
+            width: 400px;
+            margin: 0px 0px 20px 430px;
+            border: 1px inset black;
+            border-radius: 5px;   
+            padding: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Padronização de site para estudo</h1>
+    </header>
+    
+    <main id="corpo">
+        <h1 id="unico">Verificador de idade</h1>
+        <article >
+        <div>
+            <p>
+            Ano de Nascimento:
+            <input type="number" id="idade" min="0">
+            </p>
+            <p>
+                Sexo:
+                <input type="radio" name ="opcao" id="mas"><label for="checkbox">Masculino</label>
+
+                <input type="radio" name ="opcao" id="fem"><label for="checkbox2">Feminino</label>
+            </p>
+
+            <p><button type="button" id="botão" onclick="verificar()">Verificar</button></p>
+        </div>
+        <div id="res"></div>
+        </article>
+    </main>
+    <script>
+        function verificar(){
+            var agora = new Date()
+            var data = agora.getFullYear()
+            var idade = document.getElementById('idade')
+            var res = document.getElementById('res')
+            
+            if (idade.value.length == 0 || idade.value > data){
+                window.alert('ERRO! Ano não existente!')
+            }else{
+                var sexo = document.getElementsByName('opcao')
+                var idadef = data - Number(idade.value) 
+                var genero = ''
+                var img = document.createElement('img')
+                img.setAttribute('id','foto')
+            }
+            if (sexo[0].checked){
+                genero = 'Homem'
+                if(idadef < 10){
+                    res.innerHTML = `<p>Você é um ${genero} Criança de ${idadef} anos!</p>`
+                    img.setAttribute('src','../../_imagens/meninoCriança.png')
+                }else if (idadef <21 ){
+                    res.innerHTML = `<p>Você é um ${genero} Jovem de ${idadef} anos!</p>`
+                    img.setAttribute('src','../../_imagens/homemJovem.png')
+                }else if (idadef < 50){
+                    res.innerHTML = `<p>Você é um ${genero} Adulto de ${idadef} anos!</p>`
+                    img.setAttribute('src','../../_imagens/homemAdulto.png')
+                }else{
+                    res.innerHTML = `<p>Você é um ${genero} Idoso de ${idadef} anos!</p>`
+                    img.setAttribute('src','../../_imagens/homemIdoso.png')
+                }
+            }else if (sexo[1].checked){
+                genero = 'Mulher'
+                if(idadef < 10){
+                    res.innerHTML = `<p>Você é uma ${genero} Criança de ${idadef} anos!</p>`
+                    img.setAttribute('src','../../_imagens/meninaCriança.png')
+                }else if (idadef <21 ){
+                    res.innerHTML = `<p>Você é uma ${genero} Jovem de ${idadef} anos!</p>`
+                    img.setAttribute('src','../../_imagens/mulherJovem.png')
+                }else if (idadef < 50){
+                    res.innerHTML = `<p>Você é uma ${genero} Adulta de ${idadef} anos!</p>`
+                    img.setAttribute('src','../../_imagens/mulherAdulta.png')
+                }else{
+                    res.innerHTML = `<p>Você é uma ${genero} Idosa de ${idadef} anos!</p>`
+                    img.setAttribute('src','../../_imagens/mulherIdosa.png')
+                }
+            }
+            res.appendChild(img)
+        }
+    </script>
+    <footer>
+        <h2>Feito para Testes e Estudos</h2>
+        <h3>Por André Lima</h3>
+    </footer>
+</body>
+</html>

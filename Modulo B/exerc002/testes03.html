@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            font: normal 18px arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Qual o seu nome?");
+        document.writeln(`<h2>Olá, ${nome.toUpperCase()}. Seu nome tem ${nome.length} letras.</h2>`);
+        
+        var nome2 = window.prompt("E o seu?");
+        document.writeln(`<h2>Olá, ${nome2.toUpperCase()}. Seu nome tem ${nome2.length} letras.</h2>`);
+
+        var n1 = parseInt(nome.length);
+        var n2= parseInt(nome2.length);
+        var soma = n1 + n2;
+        document.write(`<h2>${nome} e ${nome2}, o nome de vocês dois juntos tem ${soma} letras.</h2>`);
+
+        var num = parseFloat(window.prompt(`${nome}, digite o seu salário:`));
+        window.alert(`Seu salário é de ${num.toFixed(2)}`);
+
+        var num2 = parseFloat(window.prompt(`${nome2}, digite agora o seu salário:`));
+        window.alert(`Seu salário é de ${num2.toFixed(2)}`)
+        
+        soma2 = num1 + num2;
+
+        document.write(`${nome} e ${nome2}, o salário de vocês somados é de ${soma2}`);
+
+        /*
+            Comandos
+
+            <variavel>.length == Atríbuto para saber quantos caracteres a variavel possui.
+            <variavel>.toUpperCase() == Método para Strings, esse comando serve para colocar todas as Strings em LETRAS MAIUSCULAS.
+            <variavel>.toLowerCase() == Método para Strings, esse comando serve para colocar todas as Strings em letras minusculas.
+            
+            <variavel>.toLocateString('pt-BR', {Style: 'currency', currency: 'BRL'}); Comando para localizar a String e colocar uma unidade monetária, no caso desse comando é o Real. 'pt-BR' é a localização para o Brasil, Style:'currency' é para abrir um CSS e mostrar que quer uma unidade monetária e o currency: 'BRL' mostra a unidade monetária escolhida, o BRL é o Real, o USD seria o Dolar americano e assim vai.
+        */
+
+    </script>
+</body>
+</html>

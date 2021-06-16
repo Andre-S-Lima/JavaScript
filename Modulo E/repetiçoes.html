@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições</title>
+    <link rel="stylesheet" href="../_css/estilo.css" type="text/css">
+    <link rel="icon" href="../_imagens/Notebook-Pen-icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Padronização de site para estudo</h1>
+        <nav> 
+            <div class="link"><a href="introducao.html">Introdução</a></div>
+            <div class="link">Repetição</div>
+            <div class="link"><a href="exercicios.html">Exercícios</a></div>
+        </nav>
+    </header>
+    <main id="corpo">
+        <h1 class="titulo">Estrutura de repetição</h1>
+        <p>No Módulo D falamos sobre as condições utilizando IF/Else ou até mesmo o Switch Case, mas imagina só, imagina que esse IF em um programa é necessário varias vezes, você teria que colocar esse if todas as vezes e isso é bem complicado. Para isso utilizamos as estruturas de repetições, ou os laços de repetição, pois dentro deles haverá um bloco de comandos que irá se repetir até chegar em um valor falso e assim fazer com que o programa continue a rodar.</p>
+
+        <h1 class="titulo">Repetição While</h1>
+        <p>A estrutura While é uma das estruturas de repetições e é a mais básica a ser utilizado. Nele você irá repetir as ações dentro dela enquanto a condição, ou seja que você delimitar, seja falso. Veja como funciona abaixo, onde você vai comer uma pizza</p>
+        <pre>
+              +----> condiçao ---------+
+              |         |              |
+              |     comerPedaço()      |
+        👍    |         |              |  👎
+              |     comerPedaço()      |
+              |         |              |
+              |---- comerPedaço()      |
+                        +--------------+
+                        |
+                        |
+                    Programa Segue
+        </pre>
+        <p>No exemplo acima podemos ver que é dada uma condição, nessa condição é checada se é positivo. Se for, você ira comer 3 pedaços de pizza para assim voltar para a condições, se for positivo novamente, você irá comer mais 3 pedaços, ficará assim até a condição proposta for negativa. Quando for negativa, o programa segue.</p>
+        <h1 class="titulo">Estrutura While</h1>
+        <p>Essa estrutura funciona exatamente igual ao exemplo acima, mas como ela é feita em JavaScript? Segue a estrutura while abaixo</p>
+        <pre>
+        <code>
+            while(condição){
+                comerPedaço() 
+                comerPedaço() 
+                comerPedaço() 
+            }
+        </code>
+        </pre>
+        <p>Pode ver que a estrutura se assemelha ao diagrama proposto no exemplo. while(enquanto) for positivo, você irá comer os 3 pedaços. Quando nao for, o programa segue</p>
+
+        <h1 class="titulo">Estrutura Do-While</h1>
+        <p>Vimos então o comando While e como funciona, nele como você pode ver a condição vem primeiro do que a execução do bloco, ou seja, verifica a condição e então executa. Mas e se for preciso que seja realizado primeiro o bloco para depois verificar a condição? Pois é, daí que temos a estrutura Do-While. Do(faça)-While(enquanto), nela o programa irá executar primeiro para depois verificar. A estrutura funciona da mesma forma que o while só muda a ordem. O código dele está abaixo:</p>
+        <pre>
+            <Code>
+                do{
+                    comerPedaço()
+                    comerPedaço()
+                    comerPedaço()
+                }while(condição)
+            </Code>
+        </pre>
+        <p>Funciona da mesma forma, apenas a ordem que muda.</p>
+
+        <h1 class="titulo">Estrutura de Repetição com Variavel de Controle</h1>
+        <p>Nessa estrutura é utilizado o comando FOR, que é uma estrutura de repetição, nele é necessária três coisas basicas, a atribuição, a condição e a incrementação. Elas trabalham nessa ordem, sendo que a ATRIBUIÇÃO é feita por você mesmo colocando em uma variavel de controle, depois vem a condição, ou seja, a verificação se o valor nessa variavel é verdadeiro ou falso para assim realizar os comandos no bloco e por fim vem a INCREMENTAÇÃO, após atribuir um valor na variavel de controle e realizar os comandos no bloco, a incremetanção vai aumentar em +1 o valor da variavel. O FOR é representado assim.</p>
+        <pre>
+            <code>
+                for (atribuição; condição; incremento){
+                    comerPedaço()
+                }
+            </code>
+        </pre>
+    </main>
+
+    <footer>
+        <h2>Feito para Testes e Estudos</h2>
+        <h3>Por André Lima</h3>
+    </footer>
+</body>
+</html>

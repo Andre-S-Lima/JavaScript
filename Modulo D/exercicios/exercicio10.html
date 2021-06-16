@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+
+    <link rel="stylesheet" href="../../_css/estilo.css" type="text/css">
+    <link rel="icon" href="../../_imagens/Notebook-Pen-icon.png" type="image/x-icon">
+
+</head>
+<body>
+        <!--Exercício de HTML referente ao exercício 07-->
+    <header>
+        <h1 class="titulo">Padronização de site para estudo</h1>
+    </header>
+    
+    <main id="corpo">
+        <h1>Exercício Switch Case</h1>
+        <label from="button">Clique no botão ao lado para saber o dia da semana de hoje: </label>
+        <button type="button" id="botao" onclick="verificar()">Verificar</button>
+        <div id="res"></div>
+        
+        <script>
+
+            function verificar(){
+            
+            var agora = new Date()
+            var diaNum = agora.getDate()
+            var diaSem = agora.getDay()
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Hoje é dia ${diaNum} de Junho`
+            
+            switch(diaSem){
+                case 0:
+                    res.innerHTML += '<p>E hoje é domingo</p>'
+                    break
+                
+                case 1:
+                    res.innerHTML += '<p>E hoje é Segunda-Feira</p>'
+                    break
+            
+                case 2:
+                    res.innerHTML += '<p>E hoje é Terça-Feira</p>'
+                    break
+
+                case 3:
+                    res.innerHTML += '<p>E hoje é Quarta-Feira</p>'
+                    break
+
+                case 4:
+                    res.innerHTML += '<p>E hoje é Quinta-Feira</p>'
+                    break
+
+                case 5:
+                    res.innerHTML += '<p>E hoje é Sexta-Feira</p>'
+                    break
+
+                case 6:
+                    res.innerHTML += '<p>E hoje é Sabado</p>'
+                    break
+            
+                }
+            }
+        </script>
+    </main>
+    
+    <footer>
+        <h2>Feito para Testes e Estudos</h2>
+        <h3>Por André Lima</h3>
+    </footer>
+</body>
+</html>

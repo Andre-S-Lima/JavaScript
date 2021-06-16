@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <link rel="stylesheet" href="../_css/estilo.css" type="text/css">
+    <link rel="icon" href="../_imagens/Notebook-Pen-icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Padronização de site para estudo</h1>
+        <nav>
+            <div class="link"><a href="introdução.html">Introdução</a></div>
+            <div class="link"><a href="condicoes.html">Condições</a></div>
+            <div class="link"><a href="exercicios.html">Exercícios</a></div>
+        </nav>
+    </header>
+    
+    <main id="corpo">
+        <h1 class="titulo">Condições</h1>
+        <p>Até agora aprendemos a mexer com variaveis e como trabalhar com elas, mas tudo de uma forma sequencial. Apenas seguia na ordem na qual voce programava, por exemplo, você pegava a variavel n1, depois pegava a variavel n2 e por fim voce somava elas, você nao podia pular para a n2 e depois a n1 por exemplo. Isso é uma forma sequencial na programação. Agora iremos aprender a programar de forma condicional, ou seja, com condições.</p>
+
+        <h2>Tipos de condições</h2>
+        <p>Existem varios tipos de condições, mas vamos nos focar nessas abaixo. Que seriam as condições simples e condições if/else. </p>
+        
+        <h2>Condições Simples</h2>
+        <p>Vamos utilizar o exemplo de dois valores, cada um dentro de uma variavel n1 e n2, e então iremos somar elas, só que você quer saber se ela é verdadeira. Utilizarems então a condição SE, ou if, para o programa verificar se é verdadeiro essa afirmação, se for verdadeira ele irá apontar, se não for, o programa rodará normalmente. Abaixo temos um exemplo da estrutura simples: </p>
+        
+        <pre>
+                            n1 = valor
+                            n2= valor
+                            soma = n1 + n2
+                                |
+                                |
+                                |
+                        soma é maior que 5?
+                                |
+                        |-------+-------|
+                        |               |
+                    Sim (true)       
+        </pre>
+
+        <h2 class="titulo"> Condição Composta </h2>
+        <p>Imagina que temos então as duas variaveis como no exemplo acima e somamos elas, só que você precisa saber se esse numero é maior que 5 só que diferente do exemplo acima, se for verdadeiro ele terá alguma ação, e se for falso terá outra ação. Você ira utilizar a estrutura do if/else para verificar se é true ou false, true se for maior que 5 ou false se não for maior que 5. Abaixo temos um exemplo de como ficaria:</p>
+
+        <pre>
+                        n1 = valor
+                        n2= valor
+                        soma = n1 + n2
+                            |
+                            |
+                            |
+                    soma é maior que 5?
+                            |
+                    |-------+-------|
+                    |               |
+                Sim (true)       Não(false)
+        </pre>
+        <p>Essa estrutura é a estrutura de condição IF, basicamente uma bifurcação na execução do seu programa, ela checa SE(if) o valor é verdadeiro, ou se é falso(else).</p>
+
+        <h2 class='titulo'>Condições Aninhandas</h2>
+        <p>As condições aninhandas seguem o mesmo padrão da condição composta, utilizando o IF/ELSE, a diferença é que para ela funcionar a condição tem que ser falsa e ao ser falsa, você utiliza outra condição dentro do ELSE. Ela se chama ELSEIF, ou ELIF. </p> 
+
+        <h2 class="titulo">Switch Case</h2>
+        <p>Até agora vemos como a estrutura IF/ELSE funciona, estrutura essa que é uma estrutura de condição. Agora iremos ver a estrutura de condição Switch. Nela, diferente do IF, não faz um comparativo pra saber se aquela expressão é true ou false, mas sim a expressão irá decidir qual ação será tomada. Abaixo terá  exemplo de como essa estrutura funciona.</p>
+        <pre>
+                        expressao(i)
+                            |
+                            |
+                            |
+                 |--------- + ---------|
+                 |          |          |
+                 |          |          |
+              caso(1)     caso(2)    caso(3)
+        </pre>
+        <p>Vimos que a expressão acima tem o valor i, imaginamos que esse i tenha o valor 1 nele, seguindo essa estrutura, nessa situação o caso(1) que vai ser o ativo, pois a expressão tem o valor de 1. A estrutura Switch case trabalha assim, nela definiremos um valor para a expressão e esse valor ira definir qual caso será executado. <strong>LEMBRE-SE</strong> no final de cada caso utilize o comando "break", pois com ele o programa irá encerrar, se o break nao for utilizado o programa continuará rodando.</p>
+    </main>
+    
+    <footer>
+        <h2>Feito para Testes e Estudos</h2>
+        <h3>Por André Lima</h3>
+    </footer>
+
+</body>
+</html>

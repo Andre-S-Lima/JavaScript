@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+    <link rel="stylesheet" href="../../_css/estilo.css" type="text/css">
+    <link rel="icon" href="../../_imagens/Notebook-Pen-icon.png" type="image/css">
+    <style>
+        div#body{
+            text-align: justify;
+            width: 400px;
+            background-color: white;
+            padding: 10px;  
+            margin: 0px 0px 20px 430px;
+            border-radius: 5px;
+            box-shadow: 3px 3px rgba(0, 0, 0, 0.185);
+        }
+
+        main#corpo > h1 {
+            text-align: center;
+            color: white;   
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Padronização de site para estudo</h1>
+        <!--Desafio da Contagem com JS-->
+    </header>
+    <main id="corpo">
+        <h1>Vamos Contar</h1>
+        <div id="body">
+            <form>
+                <p>
+                    <label for="ini">Início: </label>
+                    <input type="text" id="ini" minlength="1" maxlength="2" style="width: 200px;">
+                </p>
+                <p>
+                    <label for="fim">Fim: </label>
+                    <input type="text" id="fim" minlength="1" maxlength="2" style="width: 200px;">
+                </p>
+                <p>
+                    <label for="passo">Passo: </label>
+                    <input type="text" id="passo" minlength="1" maxlength="2" style="width: 200px;">
+                </p>
+            </form>
+            <p>
+                <button type="button" onclick="contar()">Contar</button>
+            </p>
+            <div id="res"></div>
+        
+            <script>
+                function contar(){
+                    var ini = document.getElementById('ini').value
+                    ini = Number.parseInt(ini)
+        
+                    var fim = document.getElementById('fim').value
+                    fim = Number.parseInt(fim)
+        
+                    var passo = document.getElementById('passo').value
+                    passo = Number.parseInt(passo)
+                    
+                    var res = document.getElementById('res')
+                    
+                res.innerText = ''
+                if(ini == fim){
+                    window.alert('ERRO! INICIO e FIM iguais, não há contagem a ser feita!')
+                }else if(ini <= fim){
+                    do{
+                        res.innerText += `${ini}👉`
+                        ini = ini + passo
+                    }while(ini <= fim)
+                    res.innerText += '🏁'
+                }else{
+                    do{
+                        res.innerText += `${ini}👉`
+                        ini = ini - passo
+                    }while(ini >= fim)
+                    res.innerText += '🏁'
+                }
+                
+                }    
+            </script>
+
+        </div>
+        
+    </main>
+    <footer>
+        <h2>Feito para Testes e Estudos</h2>
+        <h3>Por André Lima</h3>
+    </footer>
+
+    
+</body>
+</html>
